@@ -1,9 +1,10 @@
 
 import React,{ useRef, useState } from 'react';
-import { HeaderSection, SecSection, InfoSection, ContactSection, App, Ulist, Li, Logo  } from '../styles/styles'
+import { HeaderSection, SecSection, InfoSection, ContactSection, App, Ulist, Li, Logo, LogoImg  } from '../styles/styles'
 import ThreeD from '../3D';
 import ScrollToTop from '../TopButton';
 import ModalUfo from '../ModalUfo/index'
+import LogoDoehler from '../../image/logos/DoehlerLab.gif'
 
 function Main(){
   const [active, setActive] = useState(false)
@@ -22,7 +23,7 @@ const scrollToSection = (elementRef) => {
         <ScrollToTop />
         <HeaderSection >
           <Logo>
-             
+             <LogoImg src={LogoDoehler} alt='Loading...'/>
           </Logo>
 
           <Ulist>
@@ -43,7 +44,6 @@ const scrollToSection = (elementRef) => {
             active={active}
             setActive={setActive}
            />
-          
         }
         </SecSection>
         <InfoSection ref={info}> 

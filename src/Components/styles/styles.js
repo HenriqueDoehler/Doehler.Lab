@@ -5,11 +5,18 @@ import neon from '../../image/neonCut1.png'
 
 const height = window.innerHeight
 
-
+export const LogoImg = styled.img`
+border-radius: 15%;
+`
 
 export const Logo = styled.div`
-margin-right:35vw;
-margin-left:35vw;
+display:flex;
+position:fixed;
+
+width:60px;
+height:60px;
+margin-right:95%;
+margin-left:0vw;
 `
 
 export const HeaderSection = styled.div`
