@@ -1,11 +1,12 @@
 
-import React,{ useRef } from 'react';
+import React,{ useRef, useState } from 'react';
 import { HeaderSection, SecSection, InfoSection, ContactSection, App, Ulist, Li, Logo  } from '../styles/styles'
 import ThreeD from '../3D';
 import ScrollToTop from '../TopButton';
+import ModalUfo from '../ModalUfo/index'
 
 function Main(){
-
+  const [active, setActive] = useState(false)
 const home =    useRef(null)
 const info  =   useRef(null)
 const contact = useRef(null)
@@ -21,25 +22,37 @@ const scrollToSection = (elementRef) => {
         <ScrollToTop />
         <HeaderSection >
           <Logo>
-             <ThreeD />
+             
           </Logo>
 
           <Ulist>
             <Li onClick={() => scrollToSection(home)}>HOME</Li>
             <Li onClick={() => scrollToSection(info)}>INFO</Li>
             <Li onClick={() => scrollToSection(contact)}>CONTATO</Li>
+            <Li>BLOG</Li>
           </Ulist>
         </HeaderSection>
         <SecSection ref={home}>
-           <ThreeD />
+           <ThreeD 
+           active={active}
+           setActive={setActive}
+           />
+           {
+          active && 
+          <ModalUfo 
+            active={active}
+            setActive={setActive}
+           />
+          
+        }
         </SecSection>
         <InfoSection ref={info}> 
-        <ThreeD />
+        
         </InfoSection>
         <ContactSection ref={contact}>
-           <ThreeD />
+           
         </ContactSection>
-
+        
        </App>
     )
 
