@@ -33,6 +33,8 @@ import Model from '../3D/Ufo'
        position={[9, 1, -18]} 
        scale={active ? 1.5 : 2}
        onClick={() => setActive(!active)}
+       active={active}
+       setActive={setActive}
       />
       </Float>
       </PresentationControls>

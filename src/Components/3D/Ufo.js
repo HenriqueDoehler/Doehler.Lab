@@ -3,12 +3,12 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 
 
 export default function Model(props) {
-
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/ufo.glb')
   const { actions } = useAnimations(animations, group)
 React.useEffect(() => {
   actions.Animation.play()
+  
 }, [actions])
 
   return (
@@ -60,7 +60,13 @@ React.useEffect(() => {
           <mesh name="Ufo_Sensoren003" geometry={nodes.Ufo_Sensoren003.geometry} material={materials.UFO} rotation={[Math.PI / 2, 0, -2.51]} />
           <mesh name="Ufo_Sensoren004" geometry={nodes.Ufo_Sensoren004.geometry} material={materials.UFO} rotation={[Math.PI / 2, 0, -1.26]} />
           <mesh name="Ufo_Ufo_Engine_2" geometry={nodes.Ufo_Ufo_Engine_2.geometry} material={materials.UFO} position={[0, -0.78, 0]} rotation={[0, -0.03, 0]} />
-         <mesh name="Ufo_Ufo_Engine_2001"   /*geometry={nodes.Ufo_Ufo_Engine_2001.geometry} material={materials['Material.002']} position={[0, -0.78, 0]} rotation={[0, -0.03, 0]}  */  /> 
+          {props.active
+        ?  <mesh name="Ufo_Ufo_Engine_2001"  
+            geometry={nodes.Ufo_Ufo_Engine_2001.geometry} material={materials['Material.002']}
+            position={[0, -0.78, 0]} rotation={[0, -0.03, 0]} />
+        : <mesh name="Ufo_Ufo_Engine_2001"  
+          position={[0, -0.78, 0]} rotation={[0, -0.03, 0]} />
+      }
           <mesh name="Ufo_Engine_1" geometry={nodes.Ufo_Engine_1.geometry} material={materials.UFO} position={[0, -0.56, 0]} />
           <mesh name="Circle" geometry={nodes.Circle.geometry} material={materials.UFO} position={[0, -0.79, 0]} />
           <mesh name="Ufo_Body_Down" geometry={nodes.Ufo_Body_Down.geometry} material={materials.UFO} rotation={[Math.PI / 2, 0, 0]} />
