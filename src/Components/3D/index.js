@@ -1,4 +1,4 @@
-import React, { Suspense, useRef} from "react";
+import React, { Suspense} from "react";
 import { Canvas} from "@react-three/fiber";
 import { Float, PresentationControls } from "@react-three/drei";
 import './3D-Obj/styles.css'
@@ -6,10 +6,10 @@ import Model from '../3D/Ufo'
 
 
  function ThreeD({active, setActive}) {
-  const group = useRef()
+  
 
   return (
-    <Canvas className="canvas" camera={{ fov: 45, near:1, far:30 }}>
+    <Canvas className="canvas" camera={{ fov: 45, far:30 }}>
       <directionalLight color="blue" position={[-2, 2, 0]} intensity={2.5} />
       <directionalLight color="#346beb" position={[2, 0, -4]} intensity={1.5} />
       <directionalLight color="hotpink" position={[0.5, -2, -1]} intensity={0.8} />
@@ -33,7 +33,7 @@ import Model from '../3D/Ufo'
        position={[9, 1, -18]} 
        scale={active ? 1.5 : 2}
        onClick={() => setActive(!active)}
-       ref={group}/>
+      />
       </Float>
       </PresentationControls>
       </Suspense>

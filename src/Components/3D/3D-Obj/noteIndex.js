@@ -1,10 +1,10 @@
-import React, { Suspense, useRef} from "react";
+import React, { Suspense} from "react";
 import { Canvas} from "@react-three/fiber";
 import { NeonNotebook2 }  from '../NeonNotebook2'
 
 
 function Note3D() {
-    // const group = useRef()
+    
   
     return (
       <Canvas  camera={{ fov: 45, near:1, far:180 }}>

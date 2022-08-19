@@ -12,7 +12,7 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 
 
 
-export default function ModalUfo(active, setActive){
+export default function ModalUfo({active, setActive}){
 function TransitionDown(props) {
     return <Slide {...props} direction="down" />;
   }
@@ -27,14 +27,19 @@ function TransitionDown(props) {
 
   const handleClose = () => {
     setOpen(false);
-    
   };
 
 
     return(
         <ModalUfoDiv>
            <Card sx={{ maxWidth: 345 }}>
+           <Button
+           color="secondary"
+          variant="contained"
+          onClick={()=> setActive(!active)}
+           >X</Button>
       <CardActionArea>
+     
         <CardMedia
           component="img"
           height="200"
