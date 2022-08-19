@@ -143,7 +143,7 @@ flex-wrap: wrap;
 
 font-size: clamp(1rem, 1.5vw, 2rem); 
 background: rgb(2,2,2);
-background: linear-gradient(90deg, rgba(2,2,2,0.8130602582830007) 0%, rgba(0,0,0,0.7122199221485469) 35%, rgba(176,170,170,0.05675773727459732) 800%);
+background: linear-gradient(90deg, rgba(2,2,2,0.8130602582830007) 0%, rgba(0,0,0,0.7122199221485469) 35%, rgba(176,170,170,0.05675773727459732) 115%);
 border: 2px;
 -webkit-border-top-left-radius: 50px;
 -webkit-border-bottom-left-radius: 50px;
