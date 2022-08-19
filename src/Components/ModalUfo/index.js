@@ -33,11 +33,7 @@ function TransitionDown(props) {
     return(
         <ModalUfoDiv>
            <Card sx={{ maxWidth: 345 }}>
-           <Button
-           color="secondary"
-          variant="contained"
-          onClick={()=> setActive(!active)}
-           >X</Button>
+           
       <CardActionArea>
      
         <CardMedia
@@ -62,11 +58,16 @@ function TransitionDown(props) {
          <Button
           variant="contained"
            onClick={handleClick(TransitionDown)}>Like</Button>
+           <Button
+           color="error"
+          variant="contained"
+          onClick={()=> setActive(!active)}
+           >X</Button>
           <Snackbar
         open={open}
         onClose={handleClose}
         TransitionComponent={transition}
-        message="Obrigado!!!"
+        message="Observe o neon do Background refletindo na nave!"
         key={transition ? transition.name : ''}
       />
       </CardActions>

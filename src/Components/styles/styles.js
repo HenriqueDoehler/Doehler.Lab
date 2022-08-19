@@ -126,6 +126,7 @@ export const Li = styled.li`
    display: inline;
    padding: 23px 15px;
    cursor: pointer;
+   color: black;
    font-size: 2rem;
    :hover{
     font-size: 2.1rem;
@@ -137,22 +138,17 @@ export const Ulist = styled.ul`
 display:flex;
 justify-content: center;
 align-items: center;
-width: 40vw ;
-margin-top: 5vh;
+width: 100vw ;
 flex-wrap: wrap;
 
 font-size: clamp(1rem, 1.5vw, 2rem); 
-background: rgb(2,2,2);
-background: linear-gradient(90deg, rgba(2,2,2,0.8130602582830007) 0%, rgba(0,0,0,0.7122199221485469) 35%, rgba(176,170,170,0.05675773727459732) 115%);
-border: 2px;
--webkit-border-top-left-radius: 50px;
--webkit-border-bottom-left-radius: 50px;
--moz-border-radius-topleft: 50px;
--moz-border-radius-bottomleft: 50px;
-border-top-left-radius: 50px;
-border-bottom-left-radius: 50px;
+background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,0.692612079011292) 0%, rgba(255,255,255,0.29485297536983546) 48%, rgba(255,255,255,0.692612079011292) 100%);
 font-weight: 400;
 text-decoration: none;
 font-family: rubik, sans-serif;
 color:whitesmoke;
+:hover{
+  background: whitesmoke;
+}
     `
