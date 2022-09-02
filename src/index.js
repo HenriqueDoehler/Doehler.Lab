@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Main from './Components/Main/index';
-import reportWebVitals from './reportWebVitals';
+import './i18n/index'
 
 
 
@@ -13,4 +13,4 @@ root.render(
   </React.StrictMode>
 );
 
-reportWebVitals();
+

@@ -1,41 +1,9 @@
 import styled from 'styled-components';
 import city from '../../image/city.png'
 import neon from '../../image/neonCut1.png'
-import { pxToView} from '../../Utils/pxToView/pxToView'
+import {pxToView} from '../../Utils/pxToView/pxToView'
 
 const height = window.innerHeight
-
-
-
-export const TexTech =styled.img`
-z-index: 0;
-display: flex;
-position: absolute;
-width: clamp(10vw,100% ,20vw) ;
-left: 0%;
-`
-
-export const TextMain =styled.h1`
-display: flex;
-position:absolute;
-color: whitesmoke;
-padding: 1%;
-font-size: 64px; 
-font-weight: 700;
-z-index: 0;
-bottom: 15%;
-right: 5%;
-background: linear-gradient(194deg, rgba(40,37,37,0.6209271034497894) 99%, rgba(46,43,43,0.486095642775632) 100%);
-border: 2px;
--webkit-border-tradius: 50px;
--webkit-border-radius: 50px;
--moz-border-radius-topleft: 50px;
--moz-border-radius-bottomleft: 50px;
-border-radius: 50px;
-border-radius: 50px;
-width: clamp(10vw, 100%, 60vw);
-
-`
 
 export const LogoImg = styled.img`
 border-radius: 50%;
@@ -44,12 +12,11 @@ border-radius: 50%;
 
 export const Logo = styled.div`
 display:flex;
-position:fixed;
-
-width:80px;
-height:80px;
+position:absolute;
+width:115px;
+height:115px;
 margin-right:90%;
-margin-left:0vw;
+/* margin-left:0vw; */
 `
 
 export const HeaderSection = styled.div`
@@ -92,12 +59,7 @@ justify-content:center;
 export const ContactSection = styled.div`
 width:${pxToView(window.innerWidth)};
 height: ${height}px;
-background-image: url("${city}"); 
-background-size: auto;
-background-repeat: no-repeat; 
-background-size: cover;
-background-position:center;
-
+background: black;
 display:flex;
 align-items: center;
 justify-content:center;
@@ -126,8 +88,10 @@ export const Li = styled.li`
    display: inline;
    padding: 23px 15px;
    cursor: pointer;
-   color: black;
-   font-size: 2rem;
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
    :hover{
     font-size: 2.1rem;
    }
@@ -139,16 +103,45 @@ display:flex;
 justify-content: center;
 align-items: center;
 width: 100vw ;
+height:120px;
 flex-wrap: wrap;
-
 font-size: clamp(1rem, 1.5vw, 2rem); 
-background: rgb(255,255,255);
-background: linear-gradient(90deg, rgba(255,255,255,0.692612079011292) 0%, rgba(255,255,255,0.29485297536983546) 48%, rgba(255,255,255,0.692612079011292) 100%);
+background: linear-gradient(90deg, #000000 0%, #213D4B 100%);
+box-shadow: 0px 73px 29px rgba(0, 203, 231, 0.02), 0px 41px 25px rgba(0, 203, 231, 0.06), 0px 18px 18px rgba(0, 203, 231, 0.1), 0px 5px 10px rgba(0, 203, 231, 0.12), 0px 0px 0px rgba(0, 203, 231, 0.12);
 font-weight: 400;
 text-decoration: none;
 font-family: rubik, sans-serif;
 color:whitesmoke;
+    `
+
+export const ImgFlagB = styled.img`
+margin-left: 20%;
+margin-right: 1%;
 :hover{
-  background: whitesmoke;
+  cursor: pointer;
 }
+    `
+    export const ImgFlagA = styled.img`
+margin-right: 5%;
+:hover{
+  cursor: pointer;
+}
+
+    `
+
+    export const ContatoButton = styled.button`
+background: #1B323E;
+border: 2px solid #00099D;
+box-shadow: 13px 12px 5px rgba(0, 203, 231, 0.02), 9px 8px 5px rgba(0, 203, 231, 0.15), 5px 4px 4px rgba(0, 203, 231, 0.5), 2px 2px 3px rgba(0, 203, 231, 0.85), 1px 0px 2px rgba(0, 203, 231, 0.98), 0px 0px 0px #00CBE7;
+border-radius: 10px;
+width: 230px;
+height: 56px;
+font-size: 24px;
+cursor: pointer;
+color:whitesmoke;
+/* margin-left: 20%; */
+margin-right: 10%;
+:hover{
+    font-size: 1.7rem;
+   }
     `

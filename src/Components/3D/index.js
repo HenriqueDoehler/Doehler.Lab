@@ -1,13 +1,14 @@
 import React, { Suspense} from "react";
-import { Canvas} from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { Float, PresentationControls } from "@react-three/drei";
 import './3D-Obj/styles.css'
 import Model from '../3D/Ufo'
 
 
  function ThreeD({active, setActive}) {
+  const mesh = React.useRef()
   
-
+  
   return (
     <Canvas className="canvas" camera={{ fov: 45, far:30 }}>
       <directionalLight color="blue" position={[-2, 2, 0]} intensity={2.5} />
@@ -25,13 +26,14 @@ import Model from '../3D/Ufo'
        azimuth={[-Math.PI / 0.4, Math.PI / 0.4]}
       >
         <Float 
-       speed={1.3} 
+       speed={0.9} 
        rotationIntensity={3} 
        floatIntensity={30} 
        floatingRange={[0.1,-0.1]} >
          <Model  
        position={[9, 1, -18]} 
-       scale={active ? 1.5 : 2}
+       scale={active ? 2.5 : 2}
+       ref={mesh}
        onClick={() => setActive(!active)}
        active={active}
        setActive={setActive}

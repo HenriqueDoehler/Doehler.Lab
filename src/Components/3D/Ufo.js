@@ -1,14 +1,12 @@
 import React, { useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
-
 export default function Model(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/ufo.glb')
   const { actions } = useAnimations(animations, group)
 React.useEffect(() => {
   actions.Animation.play()
-  
 }, [actions])
 
   return (
@@ -62,7 +60,7 @@ React.useEffect(() => {
           <mesh name="Ufo_Ufo_Engine_2" geometry={nodes.Ufo_Ufo_Engine_2.geometry} material={materials.UFO} position={[0, -0.78, 0]} rotation={[0, -0.03, 0]} />
           {props.active
         ?  <mesh name="Ufo_Ufo_Engine_2001"  
-            geometry={nodes.Ufo_Ufo_Engine_2001.geometry} material={materials['Material.002']}
+            geometry={nodes.Ufo_Ufo_Engine_2001.geometry} material={materials['Material.002']} material-transparent material-opacity={0.4}
             position={[0, -0.78, 0]} rotation={[0, -0.03, 0]} />
         : <mesh name="Ufo_Ufo_Engine_2001"  
           position={[0, -0.78, 0]} rotation={[0, -0.03, 0]} />
