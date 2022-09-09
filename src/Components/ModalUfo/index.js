@@ -9,9 +9,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
-
-
-
 export default function ModalUfo({active, setActive}){
 function TransitionDown(props) {
     return <Slide {...props} direction="down" />;
@@ -28,14 +25,10 @@ function TransitionDown(props) {
   const handleClose = () => {
     setOpen(false);
   };
-
-
     return(
         <ModalUfoDiv>
-           <Card sx={{ maxWidth: 345 }}>
-           
+           <Card sx={{ maxWidth: 345 }}> 
       <CardActionArea>
-     
         <CardMedia
           component="img"
           height="200"
@@ -49,9 +42,7 @@ function TransitionDown(props) {
           <Typography variant="body2" color="text.secondary">
            Arte desenvolvida com AI e Adobe Photoshop, criando o ambiente web perfeito, com licença comercial de imagem inclusa.
           </Typography>
-          <Typography variant="body5" color="text.secondary">
-           Clique novamente no Ufo para Fechar este Box
-          </Typography>
+         
         </CardContent>
       </CardActionArea>
       <CardActions>
@@ -72,8 +63,6 @@ function TransitionDown(props) {
       />
       </CardActions>
     </Card>
-         
-
         </ModalUfoDiv>
     )
 

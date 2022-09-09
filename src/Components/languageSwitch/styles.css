@@ -1,0 +1,11 @@
+.btnFlags{
+    background: none;
+    border: none;
+    
+    
+}
+.container-flags{
+    display: flex;
+    flex-direction: row;
+    padding-right:20px ;
+}

@@ -1,41 +1,10 @@
 import styled from 'styled-components';
 import city from '../../image/city.png'
 import neon from '../../image/neonCut1.png'
-import { pxToView} from '../../Utils/pxToView/pxToView'
+import galaxy from '../../image/galaxy.png'
+import {pxToView} from '../../Utils/pxToView/pxToView'
 
 const height = window.innerHeight
-
-
-
-export const TexTech =styled.img`
-z-index: 0;
-display: flex;
-position: absolute;
-width: clamp(10vw,100% ,20vw) ;
-left: 0%;
-`
-
-export const TextMain =styled.h1`
-display: flex;
-position:absolute;
-color: whitesmoke;
-padding: 1%;
-font-size: 64px; 
-font-weight: 700;
-z-index: 0;
-bottom: 15%;
-right: 5%;
-background: linear-gradient(194deg, rgba(40,37,37,0.6209271034497894) 99%, rgba(46,43,43,0.486095642775632) 100%);
-border: 2px;
--webkit-border-tradius: 50px;
--webkit-border-radius: 50px;
--moz-border-radius-topleft: 50px;
--moz-border-radius-bottomleft: 50px;
-border-radius: 50px;
-border-radius: 50px;
-width: clamp(10vw, 100%, 60vw);
-
-`
 
 export const LogoImg = styled.img`
 border-radius: 50%;
@@ -44,21 +13,27 @@ border-radius: 50%;
 
 export const Logo = styled.div`
 display:flex;
-position:fixed;
+/* position:absolute; */
+/* width:115px;
+height:115px;
+margin-right:90%; */
 
-width:80px;
-height:80px;
-margin-right:90%;
-margin-left:0vw;
 `
 
-export const HeaderSection = styled.div`
+export const HeaderSection = styled.nav`
 width:${pxToView(window.innerWidth)};
+height:100px;
 position: fixed;
 display:flex;
-justify-content: flex-end;
+justify-content: space-between;
 align-items: center;
+background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 15%, rgba(37,59,58,0.7906512946975666) 48%, rgba(2,149,140,0.37888658881521353) 100%);
 z-index:9999;
+@media screen and (max-width: 600px) {
+  height: 60px;
+  
+}
   `
 export const SecSection = styled.div`  
 width:${pxToView(window.innerWidth)};
@@ -71,7 +46,10 @@ background-position:center;
 display:flex;
 align-items: center;
 justify-content:center;
-z-index:7000
+@media screen and (max-width: 500px) {
+  background-image: url("${galaxy}"); 
+  
+}
 `
 export const InfoSection = styled.div`
 width:${pxToView(window.innerWidth)};
@@ -92,12 +70,7 @@ justify-content:center;
 export const ContactSection = styled.div`
 width:${pxToView(window.innerWidth)};
 height: ${height}px;
-background-image: url("${city}"); 
-background-size: auto;
-background-repeat: no-repeat; 
-background-size: cover;
-background-position:center;
-
+background: white;
 display:flex;
 align-items: center;
 justify-content:center;
@@ -126,10 +99,12 @@ export const Li = styled.li`
    display: inline;
    padding: 23px 15px;
    cursor: pointer;
-   color: black;
-   font-size: 2rem;
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
    :hover{
-    font-size: 2.1rem;
+    color: #00CBE7;
    }
    `
 
@@ -140,15 +115,47 @@ justify-content: center;
 align-items: center;
 width: 100vw ;
 flex-wrap: wrap;
-
-font-size: clamp(1rem, 1.5vw, 2rem); 
-background: rgb(255,255,255);
-background: linear-gradient(90deg, rgba(255,255,255,0.692612079011292) 0%, rgba(255,255,255,0.29485297536983546) 48%, rgba(255,255,255,0.692612079011292) 100%);
+font-size: clamp(1rem, 1vw, 2rem); 
 font-weight: 400;
 text-decoration: none;
 font-family: rubik, sans-serif;
 color:whitesmoke;
-:hover{
-  background: whitesmoke;
+@media screen and (max-width: 600px){ 
+  display:none;
+
 }
     `
+    
+export const ButtonMenuMobile = styled.button`
+display:none;
+@media screen and (max-width: 600px){ 
+  display:flex;
+  background: transparent;
+  border:none;
+  margin-right: 10px;
+
+}
+
+`
+export const  UlistMobile = styled.ul`
+background: rgb(40,37,37);
+background: linear-gradient(194deg, rgba(40,37,37,0.6209271034497894) 99%, rgba(46,43,43,0.486095642775632) 100%);
+display:flex;
+align-items:center;
+justify-content:center;
+position:absolute;
+flex-direction:column;
+width:100vw;
+height:calc(100vh - 60px);
+top:60px;
+border:none;
+`
+export const  LiM = styled.li`
+font-size: clamp(1rem, 1vw, 2rem); 
+font-weight: 400;
+text-decoration: none;
+font-family: rubik, sans-serif;
+color:whitesmoke;
+list-style: none;
+padding: 30px;
+`

@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box;
   }
-  
+/*   
   html,
   body,
-  /* #root {
+  #root {
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -16,4 +16,6 @@
   .canvas{
     width: 100vw !important;
      height: 100vh !important ;
+     z-index: 7;
   }
+  
