@@ -2,8 +2,15 @@
     "translation": {
         "btnContato":"Entre em contato",
         "sobreMin": "Sobre min",
-        "projetos": "Projetos"
-
-
+        "projetos": "Projetos",
+        "welcome":  "Olá, eu sou ",
+        "tech1":  " Henrique Doehler",
+        "performance":  "Desenvolvedor Front-end...",
+        "react":  "Criação de interfaces de usuário",
+        "node":  " Plataforma de aplicação para o ecossistema javascript",
+        "css":  "Criançao de Paginas web",
+        "rc":  " Software de fotogrametria para criação de modelos 3D realistas",
+        "blender":  "software de criação em 3D",
+        "three":  "Biblioteca javascript para criação e implementaçao de ambientes e objetos 3D"
     }
 }

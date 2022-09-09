@@ -2,6 +2,15 @@
     "translation": {
         "btnContato": "Contact me",
         "sobreMin": "About me",
-        "projetos": "Projects"
+        "projetos": "Projects",
+        "welcome":  "Hi, i'm",
+        "tech1":  " Henrique Doehler",
+        "performance":  "Front-end developer...",
+        "react":  " react",
+        "node":  " Henrique Doehler",
+        "rc":  " Henrique Doehler",
+        "css":  " Henrique Doehler",
+        "blender":  " Henrique Doehler",
+        "three":  " Henrique Doehler"
     }
 }

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import city from '../../image/city.png'
 import neon from '../../image/neonCut1.png'
+import galaxy from '../../image/galaxy.png'
 import {pxToView} from '../../Utils/pxToView/pxToView'
 
 const height = window.innerHeight
@@ -12,20 +13,27 @@ border-radius: 50%;
 
 export const Logo = styled.div`
 display:flex;
-position:absolute;
-width:115px;
+/* position:absolute; */
+/* width:115px;
 height:115px;
-margin-right:90%;
-/* margin-left:0vw; */
+margin-right:90%; */
+
 `
 
-export const HeaderSection = styled.div`
+export const HeaderSection = styled.nav`
 width:${pxToView(window.innerWidth)};
+height:100px;
 position: fixed;
 display:flex;
-justify-content: flex-end;
+justify-content: space-between;
 align-items: center;
+background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 15%, rgba(37,59,58,0.7906512946975666) 48%, rgba(2,149,140,0.37888658881521353) 100%);
 z-index:9999;
+@media screen and (max-width: 600px) {
+  height: 60px;
+  
+}
   `
 export const SecSection = styled.div`  
 width:${pxToView(window.innerWidth)};
@@ -38,7 +46,10 @@ background-position:center;
 display:flex;
 align-items: center;
 justify-content:center;
-z-index:7000
+@media screen and (max-width: 500px) {
+  background-image: url("${galaxy}"); 
+  
+}
 `
 export const InfoSection = styled.div`
 width:${pxToView(window.innerWidth)};
@@ -59,7 +70,7 @@ justify-content:center;
 export const ContactSection = styled.div`
 width:${pxToView(window.innerWidth)};
 height: ${height}px;
-background: black;
+background: white;
 display:flex;
 align-items: center;
 justify-content:center;
@@ -93,7 +104,7 @@ font-weight: 400;
 font-size: 24px;
 line-height: 29px;
    :hover{
-    font-size: 2.1rem;
+    color: #00CBE7;
    }
    `
 
@@ -103,45 +114,48 @@ display:flex;
 justify-content: center;
 align-items: center;
 width: 100vw ;
-height:120px;
 flex-wrap: wrap;
-font-size: clamp(1rem, 1.5vw, 2rem); 
-background: linear-gradient(90deg, #000000 0%, #213D4B 100%);
-box-shadow: 0px 73px 29px rgba(0, 203, 231, 0.02), 0px 41px 25px rgba(0, 203, 231, 0.06), 0px 18px 18px rgba(0, 203, 231, 0.1), 0px 5px 10px rgba(0, 203, 231, 0.12), 0px 0px 0px rgba(0, 203, 231, 0.12);
+font-size: clamp(1rem, 1vw, 2rem); 
 font-weight: 400;
 text-decoration: none;
 font-family: rubik, sans-serif;
 color:whitesmoke;
-    `
+@media screen and (max-width: 600px){ 
+  display:none;
 
-export const ImgFlagB = styled.img`
-margin-left: 20%;
-margin-right: 1%;
-:hover{
-  cursor: pointer;
 }
     `
-    export const ImgFlagA = styled.img`
-margin-right: 5%;
-:hover{
-  cursor: pointer;
+    
+export const ButtonMenuMobile = styled.button`
+display:none;
+@media screen and (max-width: 600px){ 
+  display:flex;
+  background: transparent;
+  border:none;
+  margin-right: 10px;
+
 }
 
-    `
-
-    export const ContatoButton = styled.button`
-background: #1B323E;
-border: 2px solid #00099D;
-box-shadow: 13px 12px 5px rgba(0, 203, 231, 0.02), 9px 8px 5px rgba(0, 203, 231, 0.15), 5px 4px 4px rgba(0, 203, 231, 0.5), 2px 2px 3px rgba(0, 203, 231, 0.85), 1px 0px 2px rgba(0, 203, 231, 0.98), 0px 0px 0px #00CBE7;
-border-radius: 10px;
-width: 230px;
-height: 56px;
-font-size: 24px;
-cursor: pointer;
+`
+export const  UlistMobile = styled.ul`
+background: rgb(40,37,37);
+background: linear-gradient(194deg, rgba(40,37,37,0.6209271034497894) 99%, rgba(46,43,43,0.486095642775632) 100%);
+display:flex;
+align-items:center;
+justify-content:center;
+position:absolute;
+flex-direction:column;
+width:100vw;
+height:calc(100vh - 60px);
+top:60px;
+border:none;
+`
+export const  LiM = styled.li`
+font-size: clamp(1rem, 1vw, 2rem); 
+font-weight: 400;
+text-decoration: none;
+font-family: rubik, sans-serif;
 color:whitesmoke;
-/* margin-left: 20%; */
-margin-right: 10%;
-:hover{
-    font-size: 1.7rem;
-   }
-    `
+list-style: none;
+padding: 30px;
+`

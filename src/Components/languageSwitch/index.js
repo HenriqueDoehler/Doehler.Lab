@@ -19,7 +19,7 @@ const languageOptions = [
 export default function LanguageSwitcher()  {
     const {i18n} = useTranslation()
     return (
-<div>
+<div className='container-flags'>
     {languageOptions.map(languageOptions => (
         
         <button className='btnFlags'
