@@ -1,6 +1,6 @@
 import React, { Suspense} from "react";
 import { Canvas } from "@react-three/fiber";
-import { Float, PresentationControls } from "@react-three/drei";
+import { Float, PresentationControls, Loader } from "@react-three/drei";
 import './3D-Obj/styles.css'
 import Model from '../3D/Ufo'
 
@@ -10,6 +10,7 @@ import Model from '../3D/Ufo'
   
   
   return (
+    <>
     <Canvas className="canvas" camera={{ fov: 45, far:30 }}>
       <directionalLight color="blue" position={[-2, 2, 0]} intensity={2.5} />
       <directionalLight color="#346beb" position={[2, 0, -4]} intensity={1.5} />
@@ -43,6 +44,8 @@ import Model from '../3D/Ufo'
       </Suspense>
      
     </Canvas>
+     <Loader />
+     </>
   );
 }
 

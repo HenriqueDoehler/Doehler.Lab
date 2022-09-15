@@ -53,7 +53,7 @@ justify-content:center;
 `
 export const InfoSection = styled.div`
 width:${pxToView(window.innerWidth)};
-height: ${height}px;
+height: 2200px;
 background-color: whitesmoke;
 background-repeat: no-repeat; 
 background-size: cover;
@@ -142,13 +142,14 @@ background: rgb(40,37,37);
 background: linear-gradient(194deg, rgba(40,37,37,0.6209271034497894) 99%, rgba(46,43,43,0.486095642775632) 100%);
 display:flex;
 align-items:center;
-justify-content:center;
+justify-content:flex-start;
 position:absolute;
 flex-direction:column;
 width:100vw;
 height:calc(100vh - 60px);
 top:60px;
 border:none;
+
 `
 export const  LiM = styled.li`
 font-size: clamp(1rem, 1vw, 2rem); 
@@ -158,4 +159,7 @@ font-family: rubik, sans-serif;
 color:whitesmoke;
 list-style: none;
 padding: 30px;
+top:0;
+width:100vw;
+border-bottom: 1px  solid rgba(0,0,0,0.3);
 `
